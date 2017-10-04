@@ -11,103 +11,32 @@
 <header>
     <div class="verticalMiddle">
         <h1>My Planetary Age</h1>
-        <p>It's time to find out how old you are on each planet! <br> Enter your Earth born day below and get started!</p>
+        <p>It's time to find out how old you are on each planet! <br> Enter your "Earth day" below and get started and then click on planets to find out more!</p>
         <input type="date" placeholder="Age" min="1" max="135" onchange="doAgeCalculate(this)">
     </div>
 </header>
 <main id="planets">
-    <!-- https://www.flaticon.com/packs/space-elements -->
-    <!-- https://www.flaticon.com/packs/essential-collection -->
-    <!-- https://www.flaticon.com/packs/space-3 -->
-    <!--<section id="Mercury">-->
-        <!--<h2>Mercury</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/139/139728.svg" alt ="Planet Mercury">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Venus">-->
-        <!--<h2>Venus</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/139/139682.svg" alt = "Planet Venus">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Earth">-->
-        <!--<h2>Earth</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/148/148922.svg" alt = "Planet Earth">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Mars">-->
-        <!--<h2>Mars</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/124/124582.svg" alt = "Planet Mars">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Jupiter">-->
-        <!--<h2>Jupiter</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/124/124558.svg" alt = "Planet Jupiter">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Saturn">-->
-        <!--<h2>Saturn</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/139/139729.svg" alt = "Planet Saturn">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Uranus">-->
-        <!--<h2>Uranus</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/124/124560.svg" alt = "Planet Uranus">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Neptune">-->
-        <!--<h2>Neptune</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/361/361711.svg" alt = "Planet Neptune">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
-    <!--<section id="Pluto">-->
-        <!--<h2>Pluto</h2>-->
-        <!--<figure>-->
-            <!--<img src="https://image.flaticon.com/icons/svg/361/361716.svg" alt = "Moon Pluto">-->
-        <!--</figure>-->
-        <!--<p></p>-->
-    <!--</section>-->
+    <section id="description" class="verticalMiddle">
+        <h2></h2>
+        <p></p>
+    </section>
+    <section id="sun">
+        <div></div>
+    </section>
 </main>
 <footer>
 </footer>
 <div id="templates">
-    <section id="planetTemplate" class="planet">
-        <h2></h2>
-        <!--<figure>-->
-            <!--<img>-->
-            <!--<figcaption></figcaption>-->
-        <!--</figure>-->
-        <p></p>
+    <section id="planetTemplate" onclick="activate(this)">
+        <div class="planet">
+        <h2 class="hidden"></h2>
+        <p class="hidden"></p>
+        <span class="hidden"></span>
+        </div>
     </section>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/core.js"></script>
-<!--<div class="left">-->
-    <!--<div class="space">-->
-        <!--<div class="planet mine"><h1>THIS WORLD IS MINE</h1></div>-->
-    <!--</div>-->
-<!--</div>-->
-<!--<div class="left">-->
-    <!--<div class="space">-->
-        <!--<div class="planet yours"><h1>Mars</h1></div>-->
-    <!--</div>-->
-<!--</div>-->
-
 </body>
 </html>
