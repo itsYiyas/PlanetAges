@@ -149,24 +149,18 @@ function createPlanets() {
 }
 
 function doAgeCalculate(el) {
-    // triggered when user enters their age - event triggers as soon as a user edits the year element
-    // therefore, force wait for a yyyy-mm-dd to not have leading 0 or be blank (triggered with backspace)
-    if (el.value[0] == "0" || el.value == "") {return;}
-
+    // dob is dd/mm/yyyy as input but i'm lazily splitting it to rearrange to yyyy/mm/dd for date comparison
+    var dob = (el.value).split("/");
     // hide intro text, toggle minimised header, allow overflow on planets (for thin screen/mobile hiding overflow keeps it nice)
     $('p').eq(0).toggle();
     $('header').eq(0).addClass("minimised");
     $('#planets').css('overflow',"visible");
 
     // calculate our age today, then plug that into each planet's <p> to store
-    var age = (Date.now() - new Date(el.value)) / 31557600000;
+    var age = (Date.now() - new Date(dob[2]+"/"+dob[1]+"/"+dob[0])) / 31557600000;
     $.each(planets,function(key,value) {
         var agePlanet = (age/value.yearrate);
-        if (agePlanet > 10) {
-            $('#'+value.name).find('p').html('You are ' + agePlanet.toFixed(0) + ' years old on '+value.name+'!');
-        } else {
-            $('#'+value.name).find('p').html('You are ' + agePlanet.toFixed(1) + ' years old on '+value.name+'!');
-        }
+        $('#'+value.name).find('p').html('You are ' + agePlanet.toFixed(1) + ' years old on '+value.name+'!');
     });
 }
 function activate(el) {
