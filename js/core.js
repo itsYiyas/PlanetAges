@@ -144,23 +144,6 @@ function createPlanets() {
         if (value.name == "Earth") {
             activate($copy);
         }
-        // if (value.rings) {
-        //     var sizeRings = size * 2;
-        //     $copyRingTop = $('#ringsTopTemplate')
-        //         .clone()
-        //         .css('background-image','url('+value.rings+')')
-        //         .css('width',sizeRings+"vw")
-        //         .css('height',sizeRings/2+"vw")
-        //         .css('left',size/2+"vw");
-        //     $copyRingTop.appendTo($copy);
-        //     $copyRingBot = $('#ringsBotTemplate')
-        //         .clone()
-        //         .css('background-image','url('+value.rings+')')
-        //         .css('width',sizeRings+"vw")
-        //         .css('height',sizeRings/2+"vw")
-        //         .css('left',size/2+"vw");
-        //     $copyRingBot.appendTo($copy);
-        // }
         count ++;
         $copy.appendTo('#planets');
     });
